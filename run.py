@@ -1,22 +1,35 @@
-from question import Question
+# This imports the class from another file
 
-#This is an introdiction to the quiz
-print("Welcome to the ultimate flowerpower-quiz - a game to enhance your knowledge of saving plants.")
+from Question import Question
 
-#This is the questions for the quiz
+# These are the questions/inputs for the quiz
+
 question_prompts = [
-    "Your plant is hanging, what do you do?\n(A) Throw it out\n(B) Water it\n(C) Put it in the sun\n\n"
-    "Your plant is not growing, what do you do?\n(A) Give it to your mom\n(B) Give it plant nutrition\n(C) Give it more water\n\n"
-    "Your plant is getting too big, what do you do?\n(A) Cut it down\n(B) Put it in the shadows \n(C) Give it a bigger pot\n\n"
-    "Your plant got lice, what do you do?\n(A) Kill the plant and the lice with it\n(B) Spraying the plant with soapwater\n(C) \n\n"
-    "Your plant has mold, what do you do?\n(A) Wash the plant with dishwasher\n(B) Water it\n(C) Change the soil\n\n
-
+    "What is a cat?\n(A) A predator\n(B) A perpetrator\n\n"
+    "What is a Singapura?\n(A) A country\n(B) A cat\n\n"
+    "Which month is associated with cats?\n(A) June\n(B) March\n\n"
 ] 
 
+# This is the correct answers for the questions/prompts
+
 questions = [
-    Question(question_prompts[0], "B")
+    Question(question_prompts[0], "A")
     Question(question_prompts[1], "B")
-    Question(question_prompts[2], "C")
-    Question(question_prompts[3], "B")
-    Question(question_prompts[4], "C")
+    Question(question_prompts[2], "B")
     ]
+
+# This function loops thru the questions to keep score and prints out the result
+
+
+def run_test(questions):
+    score = 0
+    for question in questions:
+        answer = input(question.prompt)
+        if answer == question.answer:
+            score += 1
+    print("You got " + str(score) + "/" + str(len(questions)) + "correct")
+
+
+# This function runs the test itself
+
+run_test(questions)
