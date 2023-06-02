@@ -18,7 +18,7 @@ questions = [
     Question(question_prompts[2], "B")
     ]
 
-# This function loops thru the questions to keep score and prints out the result
+# This function loops thru the questions to keep score and prints the result
 
 
 def run_test(questions):
