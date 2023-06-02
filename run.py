@@ -5,29 +5,30 @@ from Question import Question
 # These are the questions/inputs for the quiz
 
 question_prompts = [
-    "What is a cat?\n(A) A predator\n(B) A perpetrator\n\n"
-    "What is a Singapura?\n(A) A country\n(B) A cat\n\n"
-    "Which month is associated with cats?\n(A) June\n(B) March\n\n"
+    "What is a cat?\n(a) A predator\n(b) A perpetrator\n\n",
+    "What is a Singapura?\n(a) A country\n(b) A cat\n\n",
+    "Which month is associated with cats?\n(a) June\n(b) March\n\n",
 ] 
 
 # This is the correct answers for the questions/prompts
 
 questions = [
-    Question(question_prompts[0], "A")
-    Question(question_prompts[1], "B")
-    Question(question_prompts[2], "B")
+    Question(question_prompts[0], "a"),
+    Question(question_prompts[1], "b"),
+    Question(question_prompts[2], "b"),
     ]
 
-# This function loops thru the questions to keep score and prints the result
+# This function loops through the questions to keep score and prints the result
 
 
 def run_test(questions):
+    print("Welcome to the ultimate crazy-cat-person quiz. First question:\n")
     score = 0
     for question in questions:
         answer = input(question.prompt)
         if answer == question.answer:
             score += 1
-    print("You got " + str(score) + "/" + str(len(questions)) + "correct")
+    print("You got:\n" + str(score) + "/" + str(len(questions)) + " correct")
 
 
 # This function runs the test itself
