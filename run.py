@@ -1,4 +1,7 @@
-# This imports the class from another file
+# The code for this app was created with a tutorial on Youtube.
+# Read more about the tutorial in ReadME. 
+ 
+# This code imports the class from another file
 
 from Question import Question
 

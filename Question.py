@@ -1,4 +1,4 @@
-# This is the class for the answers ans questions in the quiz
+# This is the class for the answers and questions in the quiz
 
 class Question:
     def __init__(self, prompt, answer):
