@@ -8,6 +8,7 @@ class Question:
         self.prompt = prompt
         self.answer = answer
 
+
 # These are the questions/inputs for the quiz
 
 question_prompts = [
