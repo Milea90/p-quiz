@@ -1,9 +1,12 @@
 # The code for this app was created with a tutorial on Youtube.
 # Read more about the tutorial in ReadME. 
  
-# This code imports the class from another file
+# This is the class for the answers and questions in the quiz
 
-from Question import Question
+class Question:
+    def __init__(self, prompt, answer):
+        self.prompt = prompt
+        self.answer = answer
 
 # These are the questions/inputs for the quiz
 
